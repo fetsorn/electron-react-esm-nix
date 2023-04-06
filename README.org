@@ -1,0 +1,46 @@
+#+TITLE: react-electron-esm-nix
+#+OPTIONS: toc:nil
+
+* Setup
+** browser
+a React webapp
+#+begin_src sh
+## build with nix
+nix build https://github.com/fetsorn/react-electron-esm-nix#webapp
+
+## or build with yarn
+git clone https://github.com/fetsorn/react-electron-esm-nix
+cd ~/qualia
+yarn build:webapp
+#+end_src
+** desktop
+a desktop Electron app
+#+begin_src sh
+## with nix
+nix build https://github.com/fetsorn/react-electron-esm-nix#macos.arm64.zip
+## supported architectures:
+### linux.x64.deb
+### linux.x64.rpm
+### windows.x64.exe
+### macos.x64.zip
+### macos.arm64.zip
+
+## or build with yarn
+git clone https://github.com/fetsorn/react-electron-esm-nix
+cd ~/qualia
+yarn build:electron
+### electron-forge make  --platform darwin --arch x64   --targets @electron-forge/maker-zip;
+### electron-forge make  --platform darwin --arch arm64 --targets @electron-forge/maker-zip;
+### electron-forge make  --platform win32  --arch x64   --targets @electron-forge/maker-squirrel;
+### electron-forge make  --platform win32  --arch x64   --targets @electron-forge/maker-zip;
+### electron-forge make  --platform linux  --arch x64   --targets @electron-forge/maker-rpm;
+### electron-forge make  --platform linux  --arch x64   --targets @electron-forge/maker-deb;
+#+end_src
+* Structure of the repo
+[[src/renderer][renderer]] - a React app, packaged both as a webapp and as an Electron renderer
+
+[[src/main][main]] - main Electron thread
+* Thanks
+[[https://github.com/electron-react-boilerplate/electron-react-boilerplate][electron-react-boilerplate]] - electron-builder with TypeScript and React
+
+[[https://github.com/MatrixAI/TypeScript-Demo-Electron.git][@matrixai/typescript-demo-electron]] - electron-forge with TypeScript, Vue and Nix

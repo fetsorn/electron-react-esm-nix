@@ -1,0 +1,8 @@
+{
+  "title": "appname",
+  "page": {
+    "button": {
+      "foo": "function 'foo' with param {{ param }}"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+:root {
+  --rem: 0.277777vw;
+  --col: 2.5vw;
+
+  --color-background: #fff;
+  --color-accent: #40f;
+
+  --color-font-base: #222;
+  --color-font-accent: #fff;
+
+  --color-button-default: #40f;
+  --color-button-hover: #45f;
+  --color-button-active: #30b;
+  --color-button-focus: #48f;
+
+  --color-shadow: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --rem: 0.8vw;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+
+  overflow-x: hidden;
+}
