@@ -40,6 +40,8 @@ yarn build:electron
 [[src/renderer][renderer]] - a React app, packaged both as a webapp and as an Electron renderer
 
 [[src/main][main]] - main Electron thread
+
+[[src/api][api]] - isomorphic API
 * Thanks
 [[https://github.com/electron-react-boilerplate/electron-react-boilerplate][electron-react-boilerplate]] - electron-builder with TypeScript and React
 
